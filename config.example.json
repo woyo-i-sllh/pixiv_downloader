@@ -1,0 +1,16 @@
+{
+  "download_dir": "..",
+  "proxy": "",
+  "cookie": "",
+  "cookies_file": "",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+  "pixiv_base": "https://www.pixiv.net",
+  "image_proxy": "https://pixiv.re",
+  "image_source": "auto",
+  "jobs": 3,
+  "timeout": 30,
+  "retries": 2,
+  "max_proxy_pages": 200,
+  "all_user_works": true,
+  "prefer_original": true
+}

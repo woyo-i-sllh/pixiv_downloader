@@ -1,0 +1,21 @@
+# Local Python distributions and virtual environments
+.python/
+.venv/
+.uv-cache/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local settings and secrets
+config.json
+cookies.txt
+
+# Partial downloads
+*.part
+
+# Editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
