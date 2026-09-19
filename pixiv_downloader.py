@@ -48,6 +48,7 @@ CONTENT_TYPE_EXTENSIONS = {
 }
 DEFAULT_CONFIG: dict[str, Any] = {
     "download_dir": "..",
+    "metadata_dir": "metadata",
     "proxy": "",
     "cookie": "",
     "cookies_file": "",
@@ -849,7 +850,8 @@ def download_artwork(
     fallback_proxy = str(settings.get("image_proxy") or "")
     image_source = settings["image_source"]
 
-    metadata_path = folder / f"{artwork.id}.metadata.json"
+    metadata_root = root / str(settings.get("metadata_dir") or "metadata")
+    metadata_path = metadata_root / folder.name / f"{artwork.id}.json"
     if not dry_run:
         metadata = dict(artwork.metadata)
         metadata.setdefault("id", artwork.id)
@@ -973,6 +975,7 @@ def show_menu() -> int:
             print(" Pixiv 下载器")
             print("=" * 68)
             print(f" 下载目录 : {menu_download_root()}")
+            print(f" JSON目录 : {menu_download_root() / str(config.get('metadata_dir') or 'metadata')}")
             print(f" 代理     : {proxy}")
             print(f" Cookie   : {cookie_file}")
             print("-" * 68)

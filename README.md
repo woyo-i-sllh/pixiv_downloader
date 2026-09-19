@@ -30,15 +30,18 @@ BAT 会在结束或报错后暂停，不会一闪而过。如果虚拟环境缺�
 F:/life/pixiv/
   るまるみるみ (115064814)/
     夢-るまるみるみ-148537766.jpg
+  metadata/
+    るまるみるみ (115064814)/
+      148537766.json
 ```
 
 规则：
 
 - 单页：`作品原名-作者名-作品ID.ext`
 - 多页：`作品原名-作者名-作品ID_p0.ext`、`_p1.ext`……
-- 每件作品附带一个 `作品ID.metadata.json` 信息文件
+- 作品 JSON 单独保存在 `metadata/作者名 (作者ID)/作品ID.json`
 
-修改 `config.json` 中的 `download_dir` 可以改变下载位置。
+修改 `config.json` 中的 `download_dir` 可以改变下载位置；`metadata_dir` 控制作品 JSON 的独立存放目录。
 
 ## 菜单功能
 

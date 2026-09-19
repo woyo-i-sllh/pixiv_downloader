@@ -12,5 +12,6 @@
   "retries": 2,
   "max_proxy_pages": 200,
   "all_user_works": true,
-  "prefer_original": true
+  "prefer_original": true,
+  "metadata_dir": "metadata"
 }
